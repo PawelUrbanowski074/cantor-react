@@ -1,0 +1,10 @@
+.prize {
+    display: block;
+    text-align: center;
+}
+
+.prize__text {
+    width: 100px;
+    display: inline-block;
+    padding-right: 10px;
+}
