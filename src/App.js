@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Input from "./Input";
+import UserInput from "./UserInput";
 import Output from "./Output";
 import Currency from "./Currency";
 import Header from "./Header";
@@ -52,7 +52,7 @@ function App() {
           />
           <Prize
             title="Kwota:"
-            extraContent={<Input transactionAmount={transactionAmount} setTransactionAmount={setTransactionAmount} />}
+            extraContent={<UserInput transactionAmount={transactionAmount} setTransactionAmount={setTransactionAmount} />}
           />
         </Fieldset>
         <Fieldset title="Co kupujesz:">

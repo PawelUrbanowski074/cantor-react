@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Input = ({ transactionAmount, setTransactionAmount }) => {
+const UserInput = ({ transactionAmount, setTransactionAmount }) => {
     return (
         <input
             value={transactionAmount}
@@ -14,4 +14,4 @@ const Input = ({ transactionAmount, setTransactionAmount }) => {
     )
 };
 
-export default Input;
+export default UserInput;
