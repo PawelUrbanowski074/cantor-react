@@ -1,8 +1,8 @@
 import "./style.css";
 
-const Form = ({ children, onFormSubmit }) => {
+const Form = ({ children, onFormSubmit, onFormReset }) => {
     return (
-        <form className="form" onSubmit={onFormSubmit}>
+        <form className="form" onSubmit={onFormSubmit} onReset={onFormReset}>
             {children}
         </form>
     );

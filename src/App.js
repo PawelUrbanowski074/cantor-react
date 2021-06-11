@@ -14,12 +14,20 @@ function App() {
   const [transactionAmount, setTransactionAmount] = useState("");
   const [sellCurrency, setSellCurrency] = useState("Euro");
   const [buyCurrency, setBuyCurrency] = useState("Złoty");
-  const [transactionResult, setTransactionResult] = useState("");
+  const [transactionResult, setTransactionResult] = useState("Brak");
 
   const onFormSubmit = (event) => {
     event.preventDefault();
     const result = calculateResult(transactionAmount, sellCurrency, buyCurrency);
-    setTransactionResult(`${result} ${getCurrency(buyCurrency).resultText}`);    
+    setTransactionResult(`${result} ${getCurrency(buyCurrency).resultText}`);
+  };
+
+  const onFormReset = (event) => {
+    event.preventDefault();
+    setTransactionAmount("");
+    setTransactionResult("Brak");
+    setSellCurrency("");
+    setBuyCurrency("");
   };
 
   const getRate = (sellCurrency, buyCurrency) => {
@@ -39,7 +47,7 @@ function App() {
   return (
     <Container>
       <Header title="Internetowy kantor walut" />
-      <Form onFormSubmit={onFormSubmit} >
+      <Form onFormSubmit={onFormSubmit} onFormReset={onFormReset}>
         <Fieldset title="Co sprzedajesz:">
           <Currency
             currencies={currencies}
@@ -65,7 +73,7 @@ function App() {
             buyCurrency={buyCurrency}
             setBuyCurrency={setBuyCurrency}
           />
-          <Prize title="Do wypłaty:" extraContent={<Output transactionResult={transactionResult}/>} />
+          <Prize title="Do wypłaty:" extraContent={<Output transactionResult={transactionResult} />} />
         </Fieldset>
         <Buttons />
       </Form>
