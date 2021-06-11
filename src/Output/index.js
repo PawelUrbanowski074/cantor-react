@@ -1,7 +1,7 @@
 import "./style.css";
 
-const Output = () => (
-    <span className="output">Brak</span>
+const Output = ({ transactionResult }) => (
+    <span className="output">{transactionResult}</span>
 );
 
 export default Output;

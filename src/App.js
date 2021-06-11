@@ -15,16 +15,17 @@ function App() {
   const [transactionAmount, setTransactionAmount] = useState("");
   const [sellCurrency, setSellCurrency] = useState("Euro");
   const [buyCurrency, setBuyCurrency] = useState("Złoty");
+  const [transactionResult, setTransactionResult] = useState("");
 
   const onFormSubmit = (event) => {
     event.preventDefault();
     const result = calculateResult(transactionAmount, sellCurrency, buyCurrency);
-    
+    setTransactionResult(result + " ")    
   };
 
   const getRate = (sellCurrency, buyCurrency) => {
-    const saleRate = currencies.find(({ name }) => name === sellCurrency).rate;
-    const buyRate = currencies.find(({ name }) => name === buyCurrency).rate;
+    const saleRate = getCurrency(sellCurrency).rate;
+    const buyRate = getCurrency(buyCurrency).rate;
     return saleRate / buyRate;
   };
 
@@ -32,7 +33,10 @@ function App() {
     return (transactionAmount * getRate(sellCurrency, buyCurrency)).toFixed(2);
   };
 
-  
+  const getCurrency = (currency) => {
+    return currencies.find(({ name }) => name === currency)
+  };
+
 
   return (
     <Container>
@@ -65,7 +69,7 @@ function App() {
             buyCurrency={buyCurrency}
             setBuyCurrency={setBuyCurrency}
           />
-          <Prize title="Do wypłaty:" extraContent={<Output/>} />
+          <Prize title="Do wypłaty:" extraContent={<Output transactionResult={transactionResult}/>} />
         </Fieldset>
         <Buttons />
       </Form>
