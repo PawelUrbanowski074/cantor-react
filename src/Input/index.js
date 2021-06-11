@@ -1,8 +1,6 @@
 import "./style.css";
 
-
 const Input = ({ transactionAmount, setTransactionAmount }) => {
-
     return (
         <input
             value={transactionAmount}

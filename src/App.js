@@ -11,7 +11,6 @@ import Container from "./Container";
 import currencies from "./Currencies";
 
 function App() {
-
   const [transactionAmount, setTransactionAmount] = useState("");
   const [sellCurrency, setSellCurrency] = useState("Euro");
   const [buyCurrency, setBuyCurrency] = useState("Złoty");
@@ -20,7 +19,7 @@ function App() {
   const onFormSubmit = (event) => {
     event.preventDefault();
     const result = calculateResult(transactionAmount, sellCurrency, buyCurrency);
-    setTransactionResult(` ${result} ${getCurrency(buyCurrency).resultText}`);    
+    setTransactionResult(`${result} ${getCurrency(buyCurrency).resultText}`);    
   };
 
   const getRate = (sellCurrency, buyCurrency) => {
@@ -37,18 +36,15 @@ function App() {
     return currencies.find(({ name }) => name === currency)
   };
 
-
   return (
     <Container>
       <Header title="Internetowy kantor walut" />
-      <Form
-        onFormSubmit={onFormSubmit}
-      >
+      <Form onFormSubmit={onFormSubmit} >
         <Fieldset title="Co sprzedajesz:">
           <Currency
             currencies={currencies}
             name="sell"
-            sell={true}
+            sellFieldset={true}
             sellCurrency={sellCurrency}
             setSellCurrency={setSellCurrency}
             buyCurrency={buyCurrency}
@@ -63,7 +59,7 @@ function App() {
           <Currency
             currencies={currencies}
             name="buy"
-            sell={false}
+            sellFieldset={false}
             sellCurrency={sellCurrency}
             setSellCurrency={setSellCurrency}
             buyCurrency={buyCurrency}

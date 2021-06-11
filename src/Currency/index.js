@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Currency = ({ currencies, name, sell, sellCurrency, setSellCurrency, buyCurrency, setBuyCurrency }) => (
+const Currency = ({ currencies, name, sellFieldset, sellCurrency, setSellCurrency, buyCurrency, setBuyCurrency }) => (
   <ul className="currency">
     {currencies.map(currency => (
       <li key={currency.id} className="currency__item">
@@ -11,9 +11,8 @@ const Currency = ({ currencies, name, sell, sellCurrency, setSellCurrency, buyCu
             value={sellCurrency}
             className="currency__input"
             required
-            checked={currency.name === (sell ? sellCurrency : buyCurrency)}
-            onChange={({ target }) => (sell ?  setSellCurrency(currency.name) : setBuyCurrency(currency.name))}
-
+            checked={currency.name === (sellFieldset ? sellCurrency : buyCurrency)}
+            onChange={() => (sellFieldset ? setSellCurrency : setBuyCurrency)(currency.name)}
           />
           <span className="currency__radioText">{currency.name}</span>
           <img
