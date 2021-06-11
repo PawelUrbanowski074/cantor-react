@@ -1,16 +1,6 @@
 import "./style.css";
 
-
-const Form = ({ children, transactionAmount, setTransactionAmount }) => {
-
-    
-    const onFormSubmit = (event) => {
-        event.preventDefault();
-
-        console.log(transactionAmount);
-    }
-
-
+const Form = ({ children, onFormSubmit }) => {
     return (
         <form className="form" onSubmit={onFormSubmit}>
             {children}
