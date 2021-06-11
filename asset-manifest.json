@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cantor-react/static/css/main.6cd0f985.chunk.css",
+    "main.js": "/cantor-react/static/js/main.9959f36d.chunk.js",
+    "main.js.map": "/cantor-react/static/js/main.9959f36d.chunk.js.map",
+    "runtime-main.js": "/cantor-react/static/js/runtime-main.b6625da2.js",
+    "runtime-main.js.map": "/cantor-react/static/js/runtime-main.b6625da2.js.map",
+    "static/js/2.60062afb.chunk.js": "/cantor-react/static/js/2.60062afb.chunk.js",
+    "static/js/2.60062afb.chunk.js.map": "/cantor-react/static/js/2.60062afb.chunk.js.map",
+    "static/js/3.6fe1bc01.chunk.js": "/cantor-react/static/js/3.6fe1bc01.chunk.js",
+    "static/js/3.6fe1bc01.chunk.js.map": "/cantor-react/static/js/3.6fe1bc01.chunk.js.map",
+    "index.html": "/cantor-react/index.html",
+    "static/css/main.6cd0f985.chunk.css.map": "/cantor-react/static/css/main.6cd0f985.chunk.css.map",
+    "static/js/2.60062afb.chunk.js.LICENSE.txt": "/cantor-react/static/js/2.60062afb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b6625da2.js",
+    "static/js/2.60062afb.chunk.js",
+    "static/css/main.6cd0f985.chunk.css",
+    "static/js/main.9959f36d.chunk.js"
+  ]
+}
