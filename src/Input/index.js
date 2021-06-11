@@ -3,7 +3,6 @@ import "./style.css";
 
 const Input = ({ transactionAmount, setTransactionAmount }) => {
 
-    console.log({ transactionAmount });
     return (
         <input
             value={transactionAmount}
