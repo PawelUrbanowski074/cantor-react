@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Pawel Urbanowski - Cantor with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Preview: [currency-exchange demos](https://palel.github.io/cantor-react/)
 
-## Available Scripts
+### Table of content
+1. [General](#general)
+2. [Usage](#usage)
+3. [Technologies](#used-technologies)
+4. [Screenshots](#application-screenshot)
 
-In the project directory, you can run:
 
-### `npm start`
+### General
+This site imitates the operation of an exchange office that supports the mutual exchange of three currencies: zlotys, euros and dollars. The user decides what currency he wants to sell, I enter the selected amount and choose the currency of payment.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Usage
+To perform the operation, follow these steps:
+1. In first window select the currency you want to sell (exchange).
+2. Enter the amount (round to two decimal places).
+3. In second window select the currency you want to buy (get).
+4. Click **"Sprzedaj!"** button to make the transaction.
+5. Received amount will be displayed at the bottom of the second window.
+6. After that you can reset the form using button **"Zresetuj formularz"**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Used technologies
+- HTML
+- CSS
+- JavaScript
+- BEM convention
+- ES6+
+- Babel
+- React
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Application screenshot
+![Cantor](https://raw.githubusercontent.com/palel/cantor/main/images/cantor%20-%20screenschot.png)
