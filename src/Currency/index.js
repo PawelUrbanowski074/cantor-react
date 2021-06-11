@@ -1,11 +1,17 @@
 import "./style.css";
 
-const Currency = ({ currencies }) => (
+const Currency = ({ currencies, name }) => (
   <ul className="currency">
     {currencies.map(currency => (
       <li key={currency.id} className="currency__item">
         <label className="currency__label">
-          <input type="radio" name="sell" value={currency.name} className="currency__input" required />
+          <input 
+            type="radio" 
+            name={name} 
+            value={currency.name} 
+            className="currency__input" 
+            required 
+          />
           <span className="currency__radioText">{currency.name}</span>
           <img
             className="currency__image"
