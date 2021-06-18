@@ -24,7 +24,7 @@ const Clock = () => {
         }
     }, [myDate])
 
-    
+
 
 
     return <div className="timer">Dzisiaj jest {time}</div>
