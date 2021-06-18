@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState} from "react";
 import UserInput from "./UserInput";
 import Output from "./Output";
 import Currency from "./Currency";
@@ -9,6 +9,7 @@ import Fieldset from "./Fieldset";
 import Form from "./Form";
 import Container from "./Container";
 import currencies from "./Currencies";
+import Clock from "./Clock";
 
 function App() {
   const [transactionAmount, setTransactionAmount] = useState("");
@@ -48,6 +49,7 @@ function App() {
     <Container>
       <Header title="Internetowy kantor walut" />
       <Form onFormSubmit={onFormSubmit} onFormReset={onFormReset}>
+        <Clock />
         <Fieldset title="Co sprzedajesz:">
           <Currency
             currencies={currencies}
