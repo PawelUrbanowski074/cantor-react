@@ -1,15 +1,8 @@
 import { useState } from "react";
-import UserInput from "./UserInput";
-import Output from "./Output";
-import Currency from "./Currency";
 import Header from "./Header";
-import Prize from "./Prize";
-import Buttons from "./Buttons";
-import Fieldset from "./Fieldset";
 import Form from "./Form";
 import Container from "./Container";
 import currencies from "./Currencies";
-import Clock from "./Clock";
 
 function App() {
   const [transactionAmount, setTransactionAmount] = useState("");
@@ -48,37 +41,18 @@ function App() {
   return (
     <Container>
       <Header title="Internetowy kantor walut" />
-      <Form onFormSubmit={onFormSubmit} onFormReset={onFormReset}>
-        <Clock />
-        <Fieldset title="Co sprzedajesz:">
-          <Currency
-            currencies={currencies}
-            name="sell"
-            sellFieldset={true}
-            sellCurrency={sellCurrency}
-            setSellCurrency={setSellCurrency}
-            buyCurrency={buyCurrency}
-            setBuyCurrency={setBuyCurrency}
-          />
-          <Prize
-            title="Kwota:"
-            extraContent={<UserInput transactionAmount={transactionAmount} setTransactionAmount={setTransactionAmount} />}
-          />
-        </Fieldset>
-        <Fieldset title="Co kupujesz:">
-          <Currency
-            currencies={currencies}
-            name="buy"
-            sellFieldset={false}
-            sellCurrency={sellCurrency}
-            setSellCurrency={setSellCurrency}
-            buyCurrency={buyCurrency}
-            setBuyCurrency={setBuyCurrency}
-          />
-          <Prize title="Do wypłaty:" extraContent={<Output transactionResult={transactionResult} />} />
-        </Fieldset>
-        <Buttons />
-      </Form>
+      <Form
+        onFormSubmit={onFormSubmit}
+        onFormReset={onFormReset}
+        currencies={currencies}
+        sellCurrency={sellCurrency}
+        setSellCurrency={setSellCurrency}
+        buyCurrency={buyCurrency}
+        setBuyCurrency={setBuyCurrency}
+        transactionAmount={transactionAmount}
+        setTransactionAmount={setTransactionAmount}
+        transactionResult={transactionResult}
+      />
     </Container>
   );
 }
