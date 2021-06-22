@@ -13,7 +13,8 @@ function App() {
   const onFormSubmit = (event) => {
     event.preventDefault();
     const result = calculateResult(transactionAmount, sellCurrency, buyCurrency);
-    setTransactionResult(`${result} ${getCurrency(buyCurrency).resultText}`);
+    const resultText = `${result} ${getCurrency(buyCurrency).resultText}`;
+    setTransactionResult(resultText);
   };
 
   const onFormReset = (event) => {
