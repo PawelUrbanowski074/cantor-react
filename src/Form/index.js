@@ -5,6 +5,7 @@ import Currency from "../Currency";
 import Prize from "../Prize";
 import UserInput from "../UserInput";
 import Output from "../Output";
+import Buttons from "../Buttons";
 
 const Form = ({ onFormSubmit, onFormReset, currencies, sellCurrency, setSellCurrency, buyCurrency, setBuyCurrency, transactionAmount, setTransactionAmount, transactionResult }) => {
     return (
@@ -40,6 +41,7 @@ const Form = ({ onFormSubmit, onFormReset, currencies, sellCurrency, setSellCurr
                     extraContent={<Output transactionResult={transactionResult} />} 
                 />
             </Fieldset>
+            <Buttons />
         </form>
     );
 };
