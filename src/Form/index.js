@@ -1,4 +1,4 @@
-import "./style.css";
+import { FormWrapper } from "./styled";
 import Clock from "../Clock";
 import Fieldset from "../Fieldset";
 import Currency from "../Currency";
@@ -9,7 +9,7 @@ import Buttons from "../Buttons";
 
 const Form = ({ onFormSubmit, onFormReset, currencies, sellCurrency, setSellCurrency, buyCurrency, setBuyCurrency, transactionAmount, setTransactionAmount, transactionResult }) => {
     return (
-        <form className="form" onSubmit={onFormSubmit} onReset={onFormReset}>
+        <FormWrapper onSubmit={onFormSubmit} onReset={onFormReset}>
             <Clock/>
             <Fieldset title="Co sprzedajesz:">
                 <Currency
@@ -42,7 +42,7 @@ const Form = ({ onFormSubmit, onFormReset, currencies, sellCurrency, setSellCurr
                 />
             </Fieldset>
             <Buttons />
-        </form>
+        </FormWrapper>
     );
 };
 
