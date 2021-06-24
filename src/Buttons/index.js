@@ -1,10 +1,10 @@
-import "./style.css";
+import { ButtonsWrapper, Button } from "./styled";
 
 const Buttons = () => (
-  <div className="buttons">
-    <input type="submit" className="buttons__button" value="Sprzedaj!" />
-    <input type="reset" className="buttons__button" value="Zresetuj formularz" />
-  </div>
+  <ButtonsWrapper>
+    <Button type="submit" value="Sprzedaj!" />
+    <Button type="reset" value="Zresetuj formularz" />
+  </ButtonsWrapper>
 );
 
 export default Buttons;
