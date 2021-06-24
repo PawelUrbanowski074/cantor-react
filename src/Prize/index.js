@@ -1,10 +1,10 @@
-import "./style.css";
+import { PrizeWrapper, PrizeText } from "./styled";
 
 const Prize = ({ title, extraContent }) => (
-    <label className="prize">
-        <span className="prize__text">{title}</span>
+    <PrizeWrapper>
+        <PrizeText>{title}</PrizeText>
         {extraContent}
-    </label>
+    </PrizeWrapper>
 );
 
 export default Prize;
