@@ -1,10 +1,10 @@
-import "./style.css";
+import { FieldsetWrapper, Legend } from "./styled";
 
 const Fieldset = ({ title, children }) => (
-    <fieldset className="fieldset">
-        <legend className="fieldset__legend">{title}</legend>
+    <FieldsetWrapper>
+        <Legend>{title}</Legend>
         {children}
-    </fieldset>
+    </FieldsetWrapper>
 );
 
 export default Fieldset;
