@@ -1,11 +1,10 @@
-import "./style.css";
+import { Cash } from "./styled";
 
 const UserInput = ({ transactionAmount, setTransactionAmount }) => {
     return (
-        <input
+        <Cash
             value={transactionAmount}
             onChange={({ target }) => setTransactionAmount(target.value)}
-            className="cash"
             type="number"
             min="0"
             step="0.1"
