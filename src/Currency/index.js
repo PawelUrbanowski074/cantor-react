@@ -1,29 +1,27 @@
-import "./style.css";
+import { List, Item, Label, Input, RadioText, Image } from "./styled";
 
 const Currency = ({ currencies, name, sellFieldset, sellCurrency, setSellCurrency, buyCurrency, setBuyCurrency }) => (
-  <ul className="currency">
+  <List>
     {currencies.map(currency => (
-      <li key={currency.id} className="currency__item">
-        <label className="currency__label">
-          <input
+      <Item key={currency.id}>
+        <Label>
+          <Input
             type="radio"
             name={name}
             value={sellCurrency}
-            className="currency__input"
             required
             checked={currency.name === (sellFieldset ? sellCurrency : buyCurrency)}
             onChange={() => (sellFieldset ? setSellCurrency : setBuyCurrency)(currency.name)}
           />
-          <span className="currency__radioText">{currency.name}</span>
-          <img
-            className="currency__image"
+          <RadioText>{currency.name}</RadioText>
+          <Image
             src={currency.image}
             alt={currency.altText}
           />
-        </label>
-      </li>
+        </Label>
+      </Item>
     ))}
-  </ul>
+  </List>
 );
 
 export default Currency;
