@@ -1,7 +1,7 @@
-import "./style.css";
+import { OutputSpan } from "./styled";
 
 const Output = ({ transactionResult }) => (
-    <span className="output">{transactionResult}</span>
+    <OutputSpan>{transactionResult}</OutputSpan>
 );
 
 export default Output;
