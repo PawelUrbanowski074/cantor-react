@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import { Timer } from "./styled";
+import { useCurrentDate } from "./useCurrentDate";
 
 const parsedDate = (date) => date.toLocaleString(undefined, {
     weekday: "long",
@@ -11,21 +11,11 @@ const parsedDate = (date) => date.toLocaleString(undefined, {
 });
 
 const Clock = () => {
-    const [myDate, setMyDate] = useState(new Date());
-
-    useEffect(() => {
-        const clockIntervalId = setInterval(() => {
-            setMyDate(new Date());
-        }, 1000);
-
-        return () => {
-            clearInterval(clockIntervalId);
-        }
-    }, [])
-
+    const date = useCurrentDate();
+    
     return (
         <Timer>
-            Dzisiaj jest {" "} {parsedDate(myDate)}
+            Dzisiaj jest {" "} {parsedDate(date)}
         </Timer>
     )
 };
