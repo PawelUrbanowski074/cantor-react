@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Lato', sans-serif;
         line-height: 1.5;
-        background-color: darkslategray;
+        background-color: ${({ theme }) => theme.color.darksLateGray};
         background-image: url("${background}");
         background-position: center;
     }
