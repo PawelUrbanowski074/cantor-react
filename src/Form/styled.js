@@ -6,8 +6,8 @@ export const FormWrapper = styled.form`
     width: 100%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #ddffff;
+    background-color: ${({ theme }) => theme.color.babyBlue};
     border-radius: 15px; 
     border-style:  solid;
-    border-color: darkslategrey;
+    border-color: ${({ theme }) => theme.color.darksLateGray};
 `;

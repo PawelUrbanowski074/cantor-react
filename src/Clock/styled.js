@@ -4,6 +4,6 @@ export const Timer = styled.div`
     text-align: right;
     font-size: 13px;
     font-family: 'Roboto Mono', monospace;
-    color: darkslategray;
+    color: ${({ theme }) => theme.color.darksLateGray};
     padding: 0 20px 10px 0;
 `;

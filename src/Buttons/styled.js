@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ButtonsWrapper = styled.div`
+export const Wrapper = styled.div`
     padding: 5px;
     display: block;
     text-align: center;
@@ -9,15 +9,15 @@ export const ButtonsWrapper = styled.div`
 export const Button = styled.input`
     padding: 5px 10px;
     margin: 3px;
-    background-color: darkslategray;
-    color: white;
+    background-color: ${({ theme }) => theme.color.darksLateGray};
+    color: ${({ theme }) => theme.color.white};
     border-radius: 5px;
 
     &:hover {
-        background-color: hsl(180, 25%, 30%);
+        filter: brightness(110%);
     }
 
     &:active {
-        background-color: hsl(180, 25%, 35%);
+        filter: brightness(120%);
     }
 `;
