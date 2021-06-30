@@ -13,5 +13,5 @@ export const useCurrentDate = () => {
         }
     }, []);
 
-    return [myDate];
+    return myDate;
 };
