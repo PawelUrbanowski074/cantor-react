@@ -29,6 +29,8 @@ To perform the operation, follow these steps:
 - ES6+
 - Babel
 - React
+- Styled-Components
+- React Hooks
 
 ### Application screenshot
 ![Cantor](https://raw.githubusercontent.com/palel/cantor/main/images/cantor%20-%20screenschot.png)
