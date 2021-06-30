@@ -1,22 +1,20 @@
 {
   "files": {
-    "main.css": "/cantor-react/static/css/main.8e6a10fe.chunk.css",
-    "main.js": "/cantor-react/static/js/main.68966c1b.chunk.js",
-    "main.js.map": "/cantor-react/static/js/main.68966c1b.chunk.js.map",
-    "runtime-main.js": "/cantor-react/static/js/runtime-main.20f44fb9.js",
-    "runtime-main.js.map": "/cantor-react/static/js/runtime-main.20f44fb9.js.map",
-    "static/js/2.60062afb.chunk.js": "/cantor-react/static/js/2.60062afb.chunk.js",
-    "static/js/2.60062afb.chunk.js.map": "/cantor-react/static/js/2.60062afb.chunk.js.map",
-    "static/js/3.62722529.chunk.js": "/cantor-react/static/js/3.62722529.chunk.js",
-    "static/js/3.62722529.chunk.js.map": "/cantor-react/static/js/3.62722529.chunk.js.map",
+    "main.js": "/cantor-react/static/js/main.00b39a1e.chunk.js",
+    "main.js.map": "/cantor-react/static/js/main.00b39a1e.chunk.js.map",
+    "runtime-main.js": "/cantor-react/static/js/runtime-main.b6625da2.js",
+    "runtime-main.js.map": "/cantor-react/static/js/runtime-main.b6625da2.js.map",
+    "static/js/2.2116ac72.chunk.js": "/cantor-react/static/js/2.2116ac72.chunk.js",
+    "static/js/2.2116ac72.chunk.js.map": "/cantor-react/static/js/2.2116ac72.chunk.js.map",
+    "static/js/3.6fe1bc01.chunk.js": "/cantor-react/static/js/3.6fe1bc01.chunk.js",
+    "static/js/3.6fe1bc01.chunk.js.map": "/cantor-react/static/js/3.6fe1bc01.chunk.js.map",
     "index.html": "/cantor-react/index.html",
-    "static/css/main.8e6a10fe.chunk.css.map": "/cantor-react/static/css/main.8e6a10fe.chunk.css.map",
-    "static/js/2.60062afb.chunk.js.LICENSE.txt": "/cantor-react/static/js/2.60062afb.chunk.js.LICENSE.txt"
+    "static/js/2.2116ac72.chunk.js.LICENSE.txt": "/cantor-react/static/js/2.2116ac72.chunk.js.LICENSE.txt",
+    "static/media/background.642afe32.png": "/cantor-react/static/media/background.642afe32.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.20f44fb9.js",
-    "static/js/2.60062afb.chunk.js",
-    "static/css/main.8e6a10fe.chunk.css",
-    "static/js/main.68966c1b.chunk.js"
+    "static/js/runtime-main.b6625da2.js",
+    "static/js/2.2116ac72.chunk.js",
+    "static/js/main.00b39a1e.chunk.js"
   ]
 }
