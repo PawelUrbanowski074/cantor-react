@@ -1,45 +1,78 @@
-import { FormWrapper } from "./styled";
+import currencies from "../Currencies";
+import { FormWrapper, Label, Span, Select, Option, Cash } from "./styled";
 import Clock from "../Clock";
 import Fieldset from "../Fieldset";
-import Currency from "../Currency";
-import Prize from "../Prize";
-import UserInput from "../UserInput";
-import Output from "../Output";
 import Buttons from "../Buttons";
 
-const Form = ({ onFormSubmit, onFormReset, currencies, sellCurrency, setSellCurrency, buyCurrency, setBuyCurrency, transactionAmount, setTransactionAmount, transactionResult }) => {
+const Form = ({
+    onFormSubmit,
+    onFormReset,
+    sellCurrency,
+    setSellCurrency,
+    buyCurrency,
+    setBuyCurrency,
+    transactionAmount,
+    setTransactionAmount,
+    transactionResult
+}) => {
+
     return (
         <FormWrapper onSubmit={onFormSubmit} onReset={onFormReset}>
-            <Clock/>
+            <Clock />
             <Fieldset title="Co sprzedajesz:">
-                <Currency
-                    currencies={currencies}
-                    name="sell"
-                    sellFieldset={true}
-                    sellCurrency={sellCurrency}
-                    setSellCurrency={setSellCurrency}
-                    buyCurrency={buyCurrency}
-                    setBuyCurrency={setBuyCurrency}
-                />
-                <Prize
-                    title="Kwota:"
-                    extraContent={<UserInput transactionAmount={transactionAmount} setTransactionAmount={setTransactionAmount} />}
-                />
+                <Label>
+                    <Span>Wybierz walutę:</Span>
+                    <Select
+                        value={sellCurrency}
+                        onChange={({ target }) => setSellCurrency(target.value)}
+                    >
+                        {currencies.map((currencyArray => (
+                            <Option
+                                key={currencyArray.short}
+                                value={currencyArray.short}
+                            >
+                                {currencyArray.name}
+                            </Option>
+                        )))}
+                    </Select>
+                </Label>
+                <Label>
+                    <Span>Kwota:</Span>
+                    <Cash
+                        value={transactionAmount}
+                        onChange={({ target }) => setTransactionAmount(target.value)}
+                        type="number"
+                        min="0"
+                        step="0.1"
+                        required
+                        placeholder="Wpisz kwotę..."
+                    />
+                </Label>
             </Fieldset>
             <Fieldset title="Co kupujesz:">
-                <Currency
-                    currencies={currencies}
-                    name="buy"
-                    sellFieldset={false}
-                    sellCurrency={sellCurrency}
-                    setSellCurrency={setSellCurrency}
-                    buyCurrency={buyCurrency}
-                    setBuyCurrency={setBuyCurrency}
-                />
-                <Prize
-                    title="Do wypłaty:" 
-                    extraContent={<Output transactionResult={transactionResult} />} 
-                />
+                <Label>
+                    <Span>Wybierz walutę:</Span>
+                    <Select
+                        value={buyCurrency}
+                        onChange={({ target }) => setBuyCurrency(target.value)}
+                    >
+                        {currencies.map((currencyArray => (
+                            <Option
+                                key={currencyArray.short}
+                                value={currencyArray.short}
+                            >
+                                {currencyArray.name}
+                            </Option>
+                        )))}
+                    </Select>
+                </Label>
+                <Label>
+                    <Span>Do wypłaty:</Span>
+                    <Cash
+                        value={transactionResult}
+                        disabled
+                    />
+                </Label>
             </Fieldset>
             <Buttons />
         </FormWrapper>

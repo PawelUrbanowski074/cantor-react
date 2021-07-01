@@ -6,14 +6,14 @@ import currencies from "./Currencies";
 
 function App() {
   const [transactionAmount, setTransactionAmount] = useState("");
-  const [sellCurrency, setSellCurrency] = useState("Euro");
-  const [buyCurrency, setBuyCurrency] = useState("Złoty");
+  const [sellCurrency, setSellCurrency] = useState(currencies[0].short);
+  const [buyCurrency, setBuyCurrency] = useState(currencies[1].short);
   const [transactionResult, setTransactionResult] = useState("Brak");
 
   const onFormSubmit = (event) => {
     event.preventDefault();
     const result = calculateResult(transactionAmount, sellCurrency, buyCurrency);
-    const resultText = `${result} ${getCurrency(buyCurrency).resultText}`;
+    const resultText = `${result} ${getCurrency(buyCurrency).short}`;
     setTransactionResult(resultText);
   };
 
@@ -21,8 +21,12 @@ function App() {
     event.preventDefault();
     setTransactionAmount("");
     setTransactionResult("Brak");
-    setSellCurrency("");
-    setBuyCurrency("");
+    setSellCurrency(currencies[0].short);
+    setBuyCurrency(currencies[1].short);
+  };
+
+  const getCurrency = (currency) => {
+    return currencies.find(({ short }) => short === currency)
   };
 
   const getRate = (sellCurrency, buyCurrency) => {
@@ -35,17 +39,12 @@ function App() {
     return (transactionAmount * getRate(sellCurrency, buyCurrency)).toFixed(2);
   };
 
-  const getCurrency = (currency) => {
-    return currencies.find(({ name }) => name === currency)
-  };
-
   return (
     <Container>
       <Header title="Internetowy kantor walut" />
       <Form
         onFormSubmit={onFormSubmit}
         onFormReset={onFormReset}
-        currencies={currencies}
         sellCurrency={sellCurrency}
         setSellCurrency={setSellCurrency}
         buyCurrency={buyCurrency}
