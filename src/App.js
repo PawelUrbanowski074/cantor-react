@@ -1,19 +1,21 @@
 import { useState } from "react";
+import { useApiRates } from "./useApiRates";
 import Header from "./Header";
 import Form from "./Form";
 import Container from "./Container";
-import currencies from "./Currencies";
 
 function App() {
+  const ApiData = useApiRates();
+
   const [transactionAmount, setTransactionAmount] = useState("");
-  const [sellCurrency, setSellCurrency] = useState(currencies[0].short);
-  const [buyCurrency, setBuyCurrency] = useState(currencies[1].short);
+  const [sellCurrency, setSellCurrency] = useState("EUR");
+  const [buyCurrency, setBuyCurrency] = useState("PLN");
   const [transactionResult, setTransactionResult] = useState("Brak");
 
   const onFormSubmit = (event) => {
     event.preventDefault();
     const result = calculateResult(transactionAmount, sellCurrency, buyCurrency);
-    const resultText = `${result} ${getCurrency(buyCurrency).short}`;
+    const resultText = `${result}  ${buyCurrency}`;
     setTransactionResult(resultText);
   };
 
@@ -21,18 +23,19 @@ function App() {
     event.preventDefault();
     setTransactionAmount("");
     setTransactionResult("Brak");
-    setSellCurrency(currencies[0].short);
-    setBuyCurrency(currencies[1].short);
+    setSellCurrency("EUR");
+    setBuyCurrency("PLN");
   };
 
   const getCurrency = (currency) => {
-    return currencies.find(({ short }) => short === currency)
+    return ApiData.rates[currency];
   };
 
   const getRate = (sellCurrency, buyCurrency) => {
-    const saleRate = getCurrency(sellCurrency).rate;
-    const buyRate = getCurrency(buyCurrency).rate;
-    return saleRate / buyRate;
+    const saleRate = getCurrency(sellCurrency);
+    const buyRate = getCurrency(buyCurrency);
+    console.log(buyRate + " " + saleRate);
+    return  buyRate / saleRate ;
   };
 
   const calculateResult = (transactionAmount, sellCurrency, buyCurrency) => {
@@ -52,6 +55,10 @@ function App() {
         transactionAmount={transactionAmount}
         setTransactionAmount={setTransactionAmount}
         transactionResult={transactionResult}
+
+        rates={ApiData.rates}
+        state={ApiData.state}
+        date={ApiData.date}
       />
     </Container>
   );
