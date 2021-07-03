@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/cantor-react/static/js/main.00b39a1e.chunk.js",
-    "main.js.map": "/cantor-react/static/js/main.00b39a1e.chunk.js.map",
+    "main.js": "/cantor-react/static/js/main.020fe3d7.chunk.js",
+    "main.js.map": "/cantor-react/static/js/main.020fe3d7.chunk.js.map",
     "runtime-main.js": "/cantor-react/static/js/runtime-main.b6625da2.js",
     "runtime-main.js.map": "/cantor-react/static/js/runtime-main.b6625da2.js.map",
-    "static/js/2.2116ac72.chunk.js": "/cantor-react/static/js/2.2116ac72.chunk.js",
-    "static/js/2.2116ac72.chunk.js.map": "/cantor-react/static/js/2.2116ac72.chunk.js.map",
+    "static/js/2.f507906d.chunk.js": "/cantor-react/static/js/2.f507906d.chunk.js",
+    "static/js/2.f507906d.chunk.js.map": "/cantor-react/static/js/2.f507906d.chunk.js.map",
     "static/js/3.6fe1bc01.chunk.js": "/cantor-react/static/js/3.6fe1bc01.chunk.js",
     "static/js/3.6fe1bc01.chunk.js.map": "/cantor-react/static/js/3.6fe1bc01.chunk.js.map",
     "index.html": "/cantor-react/index.html",
-    "static/js/2.2116ac72.chunk.js.LICENSE.txt": "/cantor-react/static/js/2.2116ac72.chunk.js.LICENSE.txt",
+    "static/js/2.f507906d.chunk.js.LICENSE.txt": "/cantor-react/static/js/2.f507906d.chunk.js.LICENSE.txt",
     "static/media/background.642afe32.png": "/cantor-react/static/media/background.642afe32.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b6625da2.js",
-    "static/js/2.2116ac72.chunk.js",
-    "static/js/main.00b39a1e.chunk.js"
+    "static/js/2.f507906d.chunk.js",
+    "static/js/main.020fe3d7.chunk.js"
   ]
 }
