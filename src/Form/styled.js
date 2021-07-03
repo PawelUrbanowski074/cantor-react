@@ -20,6 +20,7 @@ export const Label = styled.label`
 
     @media (max-width: 767px) {
         grid-template-columns: 1fr;
+        grid-gap: 0;
     }
 `;
 
@@ -34,6 +35,7 @@ export const Span = styled.span`
 export const Select = styled.select`
     align-self: center;
     padding-left: 10px;
+    margin: 0 10px;
     height: 30px;
     border-radius: 5px;
     text-align: center;
@@ -47,9 +49,23 @@ export const Option = styled.option`
 
 export const Cash = styled.input`
     align-self: center;
-    height: 30px;
-    border-radius: 5px;
     text-align: center;
+    height: 30px;
+    margin: 0px 10px;
+    border-radius: 5px;
     color: ${({ theme }) => theme.color.white};
     background-color: ${({ theme }) => theme.color.darksLateGray};
+
+    &::placeholder{
+        color:${({ theme }) => theme.color.white};
+    }
+`;
+
+export const ApiStatus = styled.div`
+    background-color: ${({ theme }) => theme.color.frenchPass};
+    border: 2px inset  ${({ theme }) => theme.color.darksLateGray};
+    border-radius: 10px;margin: 30px;
+    padding: 30px;
+    text-align: center;
+    font-size: 17px;
 `;
