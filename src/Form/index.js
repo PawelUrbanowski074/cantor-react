@@ -1,6 +1,7 @@
-import { FormWrapper, Label, Span, Select, Option, Cash, ApiStatus } from "./styled";
+import { FormWrapper, Label, Span, Cash, ApiStatus } from "./styled";
 import Clock from "../Clock";
 import Fieldset from "../Fieldset";
+import Select from "../Select";
 import Buttons from "../Buttons";
 import Date from "../Date";
 
@@ -22,15 +23,14 @@ const Form = ({
     return (
         <FormWrapper onSubmit={onFormSubmit} onReset={onFormReset}>
             <Clock />
-
             {state === "loading" ? (
                 <ApiStatus>
                     Trwa ładowanie niezbędnych informacji.
-                    <br/> Proszę, zaczekaj chwilę... 
+                    <br /> Proszę, zaczekaj chwilę...
                 </ApiStatus>
             ) : state === "error" ? (
                 <ApiStatus>
-                    Ups... coś poszło nie tak.<br/> 
+                    Ups... coś poszło nie tak.<br />
                     Sprawdź połączenie z internetem, lub spróbuj ponownie później.
                 </ApiStatus>
             ) : (
@@ -39,18 +39,10 @@ const Form = ({
                         <Label>
                             <Span>Wybierz walutę:</Span>
                             <Select
-                                value={sellCurrency}
-                                onChange={({ target }) => setSellCurrency(target.value)}
-                            >
-                                {Object.keys(rates).map((currencyArray => (
-                                    <Option
-                                        key={currencyArray}
-                                        value={currencyArray}
-                                    >
-                                        {currencyArray}
-                                    </Option>
-                                )))}
-                            </Select>
+                                currency={sellCurrency}
+                                setCurrency={setSellCurrency}
+                                rates={rates}
+                            />
                         </Label>
                         <Label>
                             <Span>Kwota:</Span>
@@ -69,18 +61,10 @@ const Form = ({
                         <Label>
                             <Span>Wybierz walutę:</Span>
                             <Select
-                                value={buyCurrency}
-                                onChange={({ target }) => setBuyCurrency(target.value)}
-                            >
-                                {Object.keys(rates).map((currencyArray => (
-                                    <Option
-                                        key={currencyArray}
-                                        value={currencyArray}
-                                    >
-                                        {currencyArray}
-                                    </Option>
-                                )))}
-                            </Select>
+                                currency={buyCurrency}
+                                setCurrency={setBuyCurrency}
+                                rates={rates}
+                            />
                         </Label>
                         <Label>
                             <Span>Do wypłaty:</Span>
@@ -91,7 +75,7 @@ const Form = ({
                         </Label>
                     </Fieldset>
                     <Buttons />
-                    <Date date={date}/>
+                    <Date date={date} />
                 </>
             )}
         </FormWrapper>
