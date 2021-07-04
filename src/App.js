@@ -55,7 +55,6 @@ function App() {
         transactionAmount={transactionAmount}
         setTransactionAmount={setTransactionAmount}
         transactionResult={transactionResult}
-
         rates={ApiData.rates}
         state={ApiData.state}
         date={ApiData.date}
