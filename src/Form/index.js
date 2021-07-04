@@ -1,6 +1,5 @@
-import { FormWrapper, Label, Span, Cash, ApiStatus } from "./styled";
+import { FormWrapper, Fieldset, Legend, Label, Span, Cash, ApiStatus } from "./styled";
 import Clock from "../Clock";
-import Fieldset from "../Fieldset";
 import Select from "../Select";
 import Buttons from "../Buttons";
 import Date from "../Date";
@@ -19,7 +18,6 @@ const Form = ({
     state,
     date,
 }) => {
-
     return (
         <FormWrapper onSubmit={onFormSubmit} onReset={onFormReset}>
             <Clock />
@@ -35,7 +33,8 @@ const Form = ({
                 </ApiStatus>
             ) : (
                 <>
-                    <Fieldset title="Co sprzedajesz:">
+                    <Fieldset>
+                        <Legend>Co sprzedajesz:</Legend>
                         <Label>
                             <Span>Wybierz walutę:</Span>
                             <Select
@@ -57,7 +56,8 @@ const Form = ({
                             />
                         </Label>
                     </Fieldset>
-                    <Fieldset title="Co kupujesz:">
+                    <Fieldset>
+                        <Legend>Co kupujesz:</Legend>
                         <Label>
                             <Span>Wybierz walutę:</Span>
                             <Select

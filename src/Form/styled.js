@@ -10,6 +10,20 @@ export const FormWrapper = styled.form`
     border-color: ${({ theme }) => theme.color.darksLateGray};
 `;
 
+export const Fieldset = styled.fieldset`
+    margin: 0px 20px 20px 20px;
+    border-radius: 10px;
+    background-color: ${({ theme }) => theme.color.frenchPass};
+`;
+
+export const Legend = styled.legend`
+    text-align: left;
+    padding: 10px;
+    background-color: ${({ theme }) => theme.color.darksLateGray};
+    border-radius: 5px;
+    color: ${({ theme }) => theme.color.white};
+`;
+
 export const Label = styled.label`
     display: grid;
     grid-gap: 10px;
