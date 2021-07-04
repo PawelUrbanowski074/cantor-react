@@ -15,6 +15,6 @@ export const GlobalStyle = createGlobalStyle`
         line-height: 1.5;
         background-color: ${({ theme }) => theme.color.darksLateGray};
         background-image: url("${background}");
-        background-position: center;
+        background-position: top;
     }
 `;
