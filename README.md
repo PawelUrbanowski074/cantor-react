@@ -33,4 +33,4 @@ To perform the operation, follow these steps:
 - Exchange rates downloaded and generated from the API
 
 ### Application screenshot
-![Cantor](https://raw.githubusercontent.com/palel/cantor/main/images/cantor%20-%20screenschot.png)
+![Cantor](https://raw.githubusercontent.com/palel/cantor-react/main/src/images/Animation2.gif)
