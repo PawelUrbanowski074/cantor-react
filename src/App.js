@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useApiRates } from "./useApiRates";
+import { Container } from "./styled.js";
 import Header from "./Header";
 import Form from "./Form";
-import Container from "./Container";
 
 function App() {
   const ApiData = useApiRates();
