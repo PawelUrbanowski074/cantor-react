@@ -28,9 +28,9 @@ To perform the operation, follow these steps:
 - BEM convention
 - ES6+
 - Babel
-- React
+- React with Hooks
 - Styled-Components
-- React Hooks
+- Exchange rates downloaded and generated from the API
 
 ### Application screenshot
 ![Cantor](https://raw.githubusercontent.com/palel/cantor/main/images/cantor%20-%20screenschot.png)
