@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export const useApiRates = () => {
-    const [ratesData, setRatesData] = useState({ state: "loading", base: null, date: null, rates: null, });
+    const [ratesData, setRatesData] = useState({ state: "loading" });
 
     useEffect(() => {
         const getApi = () => {
@@ -12,7 +12,7 @@ export const useApiRates = () => {
                 }
                 return response;
             }).then((response) => response.json())
-                .then(({ base, date, rates,  }) => setRatesData({ base , date, rates, }))
+                .then(({ base, date, rates,  }) => setRatesData({state: "success", date, rates, }))
                 .catch((error) => {
                     setRatesData({ state: "error" })
                     console.error("Sorry, something goes happened... Please try later.", error);
