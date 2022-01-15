@@ -1,6 +1,6 @@
 # Pawel Urbanowski - Cantor with React
 
-## Preview: [currency-exchange demos](https://palel.github.io/cantor-react/)
+## Preview: [currency-exchange demos](https://pawelurbanowski074.github.io/cantor-react/)
 
 ### Table of content
 1. [General](#general)
